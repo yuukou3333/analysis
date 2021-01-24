@@ -30,6 +30,10 @@ def text_csv_converter(datas): # datasはテキストファイルの場所
                writer = csv.writer(wf, delimiter=',')
                writer.writerow(read_text)
 if __name__ == '__main__':
-    # filenameはテキストファイルの場所
-    datas = "/Users/sendahiroshikou/Desktop/卒論_分析結果/元素分析/L+B__Ctr+Se__1/fq_002SMPL.txt"
-    text_csv_converter(datas)
+
+    for i in range(1,10):
+        datas = f"/Users/sendahiroshikou/Desktop/卒論_分析結果/元素分析/L+B__init__1/fq_00{i}SMPL.txt"
+        text_csv_converter(datas)
+    # for i in range(10,21):
+    #     datas = f"/Users/sendahiroshikou/Desktop/卒論_分析結果/元素分析/L+B__init__1/fq_0{i}SMPL.txt"
+    #     text_csv_converter(datas)
