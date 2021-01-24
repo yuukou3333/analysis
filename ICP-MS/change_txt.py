@@ -31,6 +31,7 @@ def text_csv_converter(datas): # datasはテキストファイルの場所
                writer.writerow(read_text)
 if __name__ == '__main__':
 
+# L+B init ===========================================================================================
     for i in range(1,10):
         datas = f"/Users/sendahiroshikou/Desktop/卒論_分析結果/元素分析/L+B__init__1/fq_00{i}SMPL.txt"
         text_csv_converter(datas)
