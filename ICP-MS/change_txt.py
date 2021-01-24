@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 import csv
 
@@ -5,9 +6,10 @@ import csv
 def text_csv_converter(datas): # datasはテキストファイルの場所
    # 保存するCSVファイルの場所
    file_csv = datas.replace("txt", "csv")
-   
+   file_csv = file_csv.replace("fq", "-fq")
+
   # テキストファイルを開く
-   with open(datas)as rf:
+   with open(datas, encoding='shift_jis')as rf:
        # 書き込むＣＳＶファイルを開く
        with open(file_csv, "w")as wf:
            # テキストを１行ずつ読み込む
@@ -28,6 +30,6 @@ def text_csv_converter(datas): # datasはテキストファイルの場所
                writer = csv.writer(wf, delimiter=',')
                writer.writerow(read_text)
 if __name__ == '__main__':
-   # filenameはテキストファイルの場所
-   filename = "/Users/sendahiroshikou/Desktop/卒論_分析結果/元素分析/L-B_init_1/fq_001SMPL.txt"
-   text_csv_converter(filename)
+    # filenameはテキストファイルの場所
+    datas = "/Users/sendahiroshikou/Desktop/卒論_分析結果/元素分析/L+B__Ctr+Se__1/fq_002SMPL.txt"
+    text_csv_converter(datas)
